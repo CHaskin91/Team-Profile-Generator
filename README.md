@@ -27,3 +27,4 @@ Record Screencastify Video and upload Link here.
 * YouTube Tutorial (https://www.youtube.com/watch?v=bJY3KfM77pc)
 * Constructor Functions (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/constructor)
 * Jest and Node.js Helper (https://www.robinwieruch.de/node-js-jest/)
+* Bootcamp Spot 10.5.6 - Referencing parent element with 'super' keyword and Extending Classes.
