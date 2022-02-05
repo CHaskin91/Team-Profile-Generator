@@ -85,4 +85,70 @@ const promptManager = managerData => {
     });
 };
 
+// Prompt Manager for the next Steps. Build Engineer profile, Build Intern profile, or finish team
+const promptManagerNext = () => {
+    return inquirer.prompt([
+        {
+            type: 'list',
+            name: 'managersChoice',
+            message: 'What would you like to do next? Add an Engineer, add an Intern, or finish building your Team?',
+            choices: ['Engineer', 'Intern', 'My team is complete!'],
+        }
+    ])
+    .then(nextSteps => {
+        switch(nextSteps.managersChoice) {
+            case 'Engineer':
+                createEngineer();
+                break;
+            case 'Intern':
+                createIntern();
+                break;
+            default:
+            // Generate the Team
+                generateTeam();
+                break;
+        }
+    });
+};
+
+// If Create Engineer was selected, prompt user for engineerData
+const createEngineer = engineerData => {
+    if (!teamMemberArr.engineers) {
+        teamMemberArr.engineers = [];
+    }
+    return inquirer.prompt([
+        // Prompt User for Engineer's Name
+        {
+            type: 'input',
+            name: 'name',
+            message: "What is the Engineer's name?",
+            validate: nameInput => {
+                if (nameInput) {
+                    return true;
+                } else {
+                    console.log('Please enter a valid name.');
+                    return false;
+                }
+            }
+        },
+
+        // Prompt User for Engineer's Github Username
+        {
+            type: 'input',
+            name: 'github',
+            message: 'Enter their GitHub Username.',
+            validate: githubInput => {
+                if (githubInput) {
+                    return true;
+                } else {
+                    console.log('Please enter a GitHub Username.');
+                    return false;
+                }
+            }
+        },
+
+        
+    ])
+}
+
 promptManager();
