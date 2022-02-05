@@ -30,3 +30,4 @@ Record Screencastify Video and upload Link here.
 * Bootcamp Spot 10.5.6 - Referencing parent element with 'super' keyword and Extending Classes.
 * Validate Email Characters (https://stackoverflow.com/questions/46155/whats-the-best-way-to-validate-an-email-address-in-javascript)
 * Switch Case Nodejs Documentation (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch)
+* Writing Files in Nodejs (https://stackoverflow.com/questions/2496710/writing-files-in-node-js)

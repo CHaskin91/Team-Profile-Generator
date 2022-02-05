@@ -265,3 +265,8 @@ const createIntern = internData => {
 ;}
 
 promptManager();
+
+// generateTeam created.  Writes to index.html page in dist/
+function generateTeam() {
+    
+}
