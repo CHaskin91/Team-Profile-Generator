@@ -77,7 +77,12 @@ const promptManager = managerData => {
             }
         }        
     ])
-    
-}
+    .then(managerData => {
+        // Push Manager data into a new Array
+        teamMemberArr.managers.push(new Manager(managerData.name, managerData.id, managerData.email, managerData.officeNumber, managerData.role));
+        console.log(teamMemberArr);
+        promptManagerNext();
+    });
+};
 
 promptManager();
