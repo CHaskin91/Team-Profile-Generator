@@ -268,5 +268,19 @@ promptManager();
 
 // generateTeam created.  Writes to index.html page in dist/
 function generateTeam() {
+    writeToFile('dist/index.html', generatePage(teamMemberArr));
+    console.log(`writeToFile TEST`);
+};
+
+// write the file to index.html
+function writeToFile(filename, data) {
+    fs.writeFile(filename, data, (err) => {
+        if(err) throw err;
+        console.log('Your team profile was generated successfully!  Go to the dist/ directory to find the index.html file')
+    });
+    copyFile();
+};
+
+const copyFile = () => {
     
 }

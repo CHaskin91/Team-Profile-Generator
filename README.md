@@ -31,3 +31,5 @@ Record Screencastify Video and upload Link here.
 * Validate Email Characters (https://stackoverflow.com/questions/46155/whats-the-best-way-to-validate-an-email-address-in-javascript)
 * Switch Case Nodejs Documentation (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch)
 * Writing Files in Nodejs (https://stackoverflow.com/questions/2496710/writing-files-in-node-js)
+* Get Bootstrap (https://getbootstrap.com/)
+* Font Awesome (https://fontawesome.com/)
