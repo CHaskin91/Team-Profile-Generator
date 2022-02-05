@@ -6,15 +6,13 @@ A Node.js command-line application to enter employee information and generate an
 
 ## Table of Contents
 - [Installation](#installation)
-- [Testing](#testing)
 - [Usage](#usage)
 - [Contact Me](#contact-me)
 - [Resources](#resources)
 
 ## Installation
-
-## Testing
-Record Screencastify Video passing all Tests.
+1. Make sure you have Node.js installed.
+2. Once you have Node.js successfully installed, copy the code from the GitHub Repo at (https://github.com/CHaskin91/Team-Profile-Generator).
 
 ## Usage
 Record Screencastify Video and upload Link here.
