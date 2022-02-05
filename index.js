@@ -16,6 +16,7 @@ const promptManager = managerData => {
     }
     return inquirer.prompt([
 
+        // Prompt for Manager Name
         {
             type: 'input',
             name: 'name',
@@ -30,6 +31,7 @@ const promptManager = managerData => {
             }
         },
 
+        // Prompt Manager for Employee ID
         {
             type: 'input',
             name: 'id',
@@ -44,6 +46,7 @@ const promptManager = managerData => {
             }
         },
 
+        // Prompt Manager for Email Address
         {
             type: 'input',
             name: 'email',
@@ -59,8 +62,22 @@ const promptManager = managerData => {
             }
         },
 
-        
+        // Prompt Manager for Office Number
+        {
+            type: 'input',
+            name: 'officeNumber',
+            message: 'What is your Office Number?',
+            validate: officeNumberInput => {
+                if (officeNumberInput) {
+                    return true;
+                } else {
+                    console.log('Please enter your Office Number.');
+                    return false;
+                }
+            }
+        }        
     ])
+    
 }
 
 promptManager();
