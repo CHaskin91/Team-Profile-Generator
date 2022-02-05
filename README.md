@@ -28,3 +28,4 @@ Record Screencastify Video and upload Link here.
 * Constructor Functions (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/constructor)
 * Jest and Node.js Helper (https://www.robinwieruch.de/node-js-jest/)
 * Bootcamp Spot 10.5.6 - Referencing parent element with 'super' keyword and Extending Classes.
+* Validate Email Characters (https://stackoverflow.com/questions/46155/whats-the-best-way-to-validate-an-email-address-in-javascript)
