@@ -147,8 +147,39 @@ const createEngineer = engineerData => {
             }
         },
 
-        
+        // Prompt User for Engineer's Employee ID
+        {
+            type: 'input',
+            name: 'id',
+            message: 'What is their Employee ID?',
+            validate: idInput => {
+                if (idInput) {
+                    return true;
+                } else {
+                    console.log('Please enter a valid Employee ID.');
+                    return false;
+                }
+            }
+        },
+
+        // Prompt User for Engineer's Email Address
+        {
+            type: 'input',
+            name: 'email',
+            message: 'What is their Email Address?',
+            validate: email => {
+                valid = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)
+                if (valid) {
+                    return true;
+                } else {
+                    console.log('Please enter a valid Email Address.');
+                    return false;
+                }
+            }
+        },
     ])
+
+    // Push New team member into an Array
 }
 
 promptManager();
