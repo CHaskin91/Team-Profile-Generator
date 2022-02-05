@@ -269,7 +269,7 @@ promptManager();
 // generateTeam created.  Writes to index.html page in dist/
 function generateTeam() {
     writeToFile('dist/index.html', generatePage(teamMemberArr));
-    console.log(`writeToFile TEST`);
+    console.log(`writeToFile function executed`);
 };
 
 // write the file to index.html
@@ -282,5 +282,18 @@ function writeToFile(filename, data) {
 };
 
 const copyFile = () => {
-
-}
+    return new Promise((resolve, reject) => {
+        fs.copyFile('./src/style.css', './dist/style.css', err => {
+            // If there's an error, reject the promise and send the error to the Promise .catch() method
+            if (err) {
+                reject(err);
+                return;
+            }
+            // If passed, resolve the promise and send data to the .then() method
+            resolve({
+                ok: true,
+                message: 'File created successfully!'
+            });
+        });
+    });
+};
