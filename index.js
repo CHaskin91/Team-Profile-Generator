@@ -179,7 +179,89 @@ const createEngineer = engineerData => {
         },
     ])
 
-    // Push New team member into an Array
-}
+    // Push New Engineer into teamMemberArr
+    .then(engineerData => {
+        teamMemberArr.engineers.push(new Engineer(engineerData.name, engineerData.id, engineerData.email, engineerData.github, engineerData.role));
+        console.log(teamMemberArr);
+        promptManagerNext();
+    });
+};
+
+// If Create Intern was selected, prompt user for internData
+const createIntern = internData => {
+    if (!teamMemberArr.interns) {
+        teamMemberArr.interns = [];
+    }
+    return inquirer.prompt([
+
+        // Prompt User for Intern's Name
+        {
+            type: 'input',
+            name: 'name',
+            message: "What is the Intern's name?",
+            validate: nameInput => {
+                if (nameInput) {
+                    return true;
+                } else {
+                    console.log('Please enter a valid name.');
+                    return false;
+                }
+            }
+        },
+
+        // Prompt User for Intern's Employee ID
+        {
+            type: 'input',
+            name: 'id',
+            message: 'What is their Employee ID?',
+            validate: idInput => {
+                if (idInput) {
+                    return true;
+                } else {
+                    console.log('Please enter a valid Employee ID.');
+                    return false;
+                }
+            }
+        },
+
+        // Prompt User for Intern's Email Address
+        {
+            type: 'input',
+            name: 'email',
+            message: 'What is their Email Address?',
+            validate: email => {
+                valid = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)
+                if (valid) {
+                    return true;
+                } else {
+                    console.log('Please enter a valid Email Address.');
+                    return false;
+                }
+            }
+        },
+
+        // Prompt User for Intern's School
+        {
+            type: 'input',
+            name: 'school',
+            message: 'What School is the Intern attending?',
+            validate: schoolInput => {
+                if (schoolInput) {
+                    return true;
+                } else {
+                    console.log('Please enter a School Name.');
+                    return false;
+                }
+            }
+        }
+    ])
+
+    // Push New Intern into teamMemberArr
+    .then(internData => {
+        teamMemberArr.interns.push(new Intern(internData.name, internData.id, internData.email, internData.school, internData.role));
+        console.log(teamMemberArr);
+        promptManagerNext();
+    });
+;}
 
 promptManager();
