@@ -15,6 +15,7 @@ const promptManager = managerData => {
         teamMemberArr.managers = [];
     }
     return inquirer.prompt([
+
         {
             type: 'input',
             name: 'name',
@@ -24,6 +25,20 @@ const promptManager = managerData => {
                     return true;
                 } else {
                     console.log('Please enter your name.');
+                    return false;
+                }
+            }
+        },
+
+        {
+            type: 'input',
+            name: 'id',
+            message: 'What is your Employee ID?',
+            validate: idInput => {
+                if (idInput) {
+                    return true;
+                } else {
+                    console.log('Please enter your Employee ID.');
                     return false;
                 }
             }
