@@ -5,7 +5,7 @@ const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
 const Manager = require('./lib/Manager');
 
-// const generatePage = require('./src/page-template.js');
+const generatePage = require('./src/page-template.js');
 
 const teamMemberArr = [];
 
@@ -282,5 +282,5 @@ function writeToFile(filename, data) {
 };
 
 const copyFile = () => {
-    
+
 }
