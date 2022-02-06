@@ -75,14 +75,14 @@ const promptManager = managerData => {
                     return false;
                 }
             }
-        }        
+        }
     ])
-    .then(managerData => {
-        // Push Manager data into a new Array
-        teamMemberArr.managers.push(new Manager(managerData.name, managerData.id, managerData.email, managerData.officeNumber, managerData.role));
-        console.log(teamMemberArr);
-        promptManagerNext();
-    });
+        .then(managerData => {
+            // Push Manager data into a new Array
+            teamMemberArr.managers.push(new Manager(managerData.name, managerData.id, managerData.email, managerData.officeNumber, managerData.role));
+            console.log(teamMemberArr);
+            promptManagerNext();
+        });
 };
 
 // Prompt Manager for the next Steps. Build Engineer profile, Build Intern profile, or finish team
@@ -95,20 +95,20 @@ const promptManagerNext = () => {
             choices: ['Engineer', 'Intern', 'My team is complete!'],
         }
     ])
-    .then(nextSteps => {
-        switch(nextSteps.managersChoice) {
-            case 'Engineer':
-                createEngineer();
-                break;
-            case 'Intern':
-                createIntern();
-                break;
-            default:
-            // Generate the Team
-                generateTeam();
-                break;
-        }
-    });
+        .then(nextSteps => {
+            switch (nextSteps.managersChoice) {
+                case 'Engineer':
+                    createEngineer();
+                    break;
+                case 'Intern':
+                    createIntern();
+                    break;
+                default:
+                    // Generate the Team
+                    generateTeam();
+                    break;
+            }
+        });
 };
 
 // If Create Engineer was selected, prompt user for engineerData
@@ -179,12 +179,12 @@ const createEngineer = engineerData => {
         },
     ])
 
-    // Push New Engineer into teamMemberArr
-    .then(engineerData => {
-        teamMemberArr.engineers.push(new Engineer(engineerData.name, engineerData.id, engineerData.email, engineerData.github, engineerData.role));
-        console.log(teamMemberArr);
-        promptManagerNext();
-    });
+        // Push New Engineer into teamMemberArr
+        .then(engineerData => {
+            teamMemberArr.engineers.push(new Engineer(engineerData.name, engineerData.id, engineerData.email, engineerData.github, engineerData.role));
+            console.log(teamMemberArr);
+            promptManagerNext();
+        });
 };
 
 // If Create Intern was selected, prompt user for internData
@@ -256,13 +256,14 @@ const createIntern = internData => {
         }
     ])
 
-    // Push New Intern into teamMemberArr
-    .then(internData => {
-        teamMemberArr.interns.push(new Intern(internData.name, internData.id, internData.email, internData.school, internData.role));
-        console.log(teamMemberArr);
-        promptManagerNext();
-    });
-;}
+        // Push New Intern into teamMemberArr
+        .then(internData => {
+            teamMemberArr.interns.push(new Intern(internData.name, internData.id, internData.email, internData.school, internData.role));
+            console.log(teamMemberArr);
+            promptManagerNext();
+        });
+    ;
+}
 
 promptManager();
 
@@ -275,7 +276,7 @@ function generateTeam() {
 // write the file to index.html
 function writeToFile(filename, data) {
     fs.writeFile(filename, data, (err) => {
-        if(err) throw err;
+        if (err) throw err;
         console.log('Your team profile was generated successfully!  Go to the dist/ directory to find the index.html file')
     });
     copyFile();

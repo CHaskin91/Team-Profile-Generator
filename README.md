@@ -12,7 +12,9 @@ A Node.js command-line application to enter employee information and generate an
 
 ## Installation
 1. Make sure you have Node.js installed.
-2. Once you have Node.js successfully installed, copy the code from the GitHub Repo at (https://github.com/CHaskin91/Team-Profile-Generator).
+2. Once you have Node.js successfully installed, copy the code from the GitHub Repo at (https://github.com/CHaskin91/Team-Profile-Generator).  Clone this repo into the folder of your choice on your local machine.
+3. In order to run the application, enter `npm install` into the command line to install npm packages/modules.
+4. Enter `node index.js` in the command line to run the generator.  Answer the questions as prompted.  Once finished, the fill be generated to the index.html file in the dist/ folder.
 
 ## Usage
 Record Screencastify Video and upload Link here.
