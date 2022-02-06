@@ -17,7 +17,8 @@ A Node.js command-line application to enter employee information and generate an
 4. Enter `node index.js` in the command line to run the generator.  Answer the questions as prompted.  Once finished, the file will be generated to the index.html file in the `dist/` folder.
 
 ## Usage
-Record Screencastify Video and upload Link here.
+Follow the Link below to see a video tutorial on how to use the Application!
+[https://drive.google.com/file/d/11YybAz82aCWFy2maLLI360qaWSkprkSi/view]
 
 ## Contact Me
 * GitHub Profile: [CHaskin91](https://github.com/CHaskin91)
