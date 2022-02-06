@@ -93,7 +93,24 @@ module.exports = templateData => {
     }
 
     // if 1 engineer and no interns were entered, generate manager and engineer cards
+    if (engineers && !interns) {
+        showCards = `${generateManagerCards(managers)}
+        ${generateEngineerCards(engineers)}`
+    }
 
+    // if 1 intern and no engineers were entered, generate manager and intern cards
+    if (!engineers && interns) {
+        showCards = `${generateManagerCards(managers)}
+        ${generateInternCards(interns)}`
+    }
+
+    // if 1 engineer and 1 intern were entered, generate manager, engineer, and intern cards
+    if (engineers && interns) {
+        showCards = `${generateManagerCards(managers)}
+        ${generateEngineerCards(engineers)}
+        ${generateInternCards(interns)}`
+    }
+    
     return `
 <!DOCTYPE html>
 <html lang="en">
