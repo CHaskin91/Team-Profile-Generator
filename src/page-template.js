@@ -64,7 +64,7 @@ const generateInternCards = employeeArr => {
                 return `
             <div class = "card employee-card">
                     <div class = "card-header">
-                        <h2 class = "card-title">Intern Name</h2>
+                        <h2 class = "card-title">${name}</h2>
                         <h3 class = "card-subtitle mb-2 text-muted"><i class="fas fa-user"></i>${role}</h3>
                     </div>
                     
