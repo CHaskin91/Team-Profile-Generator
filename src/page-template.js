@@ -110,7 +110,7 @@ module.exports = templateData => {
         ${generateEngineerCards(engineers)}
         ${generateInternCards(interns)}`
     }
-    
+
     return `
 <!DOCTYPE html>
 <html lang="en">
